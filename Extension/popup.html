@@ -1,0 +1,30 @@
+﻿ <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Eco First Shopping Extension</title>
+    <script src="StoreScripts/CommonBasket.js"></script>
+    <script src="popup.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="w3.css">
+</head>
+<body>
+    <div class="mainDiv">
+        <div style="width: auto; top: 4px; left: 4px; float:left;">
+            <img src="images/eco-bag-128.png" width="32" alt="Eco First Shopping Logo" style="float:left;" />
+            <h4 style="float:right; margin-left:4px; margin-top: auto; vertical-align: text-top">Eco First Shopping </h4>
+        </div>
+        <div style="clear: left; float: left;">
+            <span>Eco friendly options for current shopping cart items:</span>
+        </div>
+        <div id="basketClone" style="width:100%; overflow-y: auto; height:65%; ">
+            <table id="tblBasketClone"></table>
+        </div>
+        <div id="message" style="width:100%; overflow-y: auto;"></div>
+        <div id="actionDiv" class="w3-display-bottomright w3-padding-large">
+            <button id="btnShowPageContent" type="button" value="Show Content" style="display:none">Show Content</button>
+            <button id="btnShowCreditOptions" type="button" value="Show Carbon Credit Options">Show Carbon Credit Options</button>
+        </div>
+    </div>
+</body>
+</html>
