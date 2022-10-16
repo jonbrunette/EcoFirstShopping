@@ -3,7 +3,6 @@ package com.eco.product.controller;
 import com.eco.product.entity.Product;
 import com.eco.product.index.Indexing;
 import org.apache.lucene.queryparser.classic.ParseException;
-import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -25,10 +24,8 @@ public class SearchController {
     @Produces(MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity searchEcoProducts(@RequestParam String inField, @RequestParam String keyword) {
         try {
-            ObjectMapper mapper = new ObjectMapper();
-            List<Product> body = indexing.searchIndex(inField, keyword);
-            String value = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(body);
-            return ResponseEntity.ok(value);
+            List<Product> response = indexing.searchIndex(inField, keyword);
+            return ResponseEntity.ok(response);
         } catch (IOException | ParseException ioException) {
             ioException.printStackTrace();
         }

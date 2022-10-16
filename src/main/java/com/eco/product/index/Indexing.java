@@ -5,6 +5,7 @@ import com.eco.product.service.ProductService;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
+import org.apache.lucene.document.StoredField;
 import org.apache.lucene.document.TextField;
 import org.apache.lucene.index.*;
 import org.apache.lucene.queryparser.classic.ParseException;
@@ -27,14 +28,13 @@ import java.util.Objects;
 
 @Component
 public class Indexing {
-    private ArrayList<Product> products;
+    private ArrayList<Product> products = new ArrayList<>();
     private Directory memoryIndex;
 
     @Autowired
     private ProductService service;
 
     public void readExcel() throws IOException {
-        products = new ArrayList<>();
         FileInputStream file = new FileInputStream("src/main/java/com/eco/product/Dataset.xlsx");
         Workbook workbook = new XSSFWorkbook(file);
         Sheet sheet = workbook.getSheetAt(0);
@@ -70,6 +70,7 @@ public class Indexing {
         for (Product product : products) {
             Document document = new Document();
 
+            document.add(new StoredField("id",product.getId()));
             document.add(new TextField("name", product.getName(), Field.Store.YES));
             document.add(new TextField("category", product.getCategory(), Field.Store.YES));
             document.add(new TextField("manfacturer", product.getManufacturer(), Field.Store.YES));
@@ -87,7 +88,9 @@ public class Indexing {
     @PostConstruct
     public void initializeIndex() {
         try {
-            readExcel();
+            products = (ArrayList<Product>) service.getProducts();
+            if(products.size() == 0)
+                readExcel();
             createIndex();
         } catch (IOException ioException) {
             System.out.println(ioException.getLocalizedMessage());
@@ -104,16 +107,17 @@ public class Indexing {
         List<Product> products = new ArrayList<>();
         for (ScoreDoc scoreDoc : topDocs.scoreDocs) {
             Document document = searcher.doc(scoreDoc.doc);
-            products.add(new Product(
-                            document.get("name"),
-                            document.get("category"),
-                            document.get("manfacturer"),
-                            document.get("country_of_manufacture"),
-                            document.get("benefits"),
-                            document.get("link"),
-                            document.get("image")
-                    )
+            Product product = new Product(
+                    Integer.parseInt(document.get("id")),
+                    document.get("name"),
+                    document.get("category"),
+                    document.get("manfacturer"),
+                    document.get("country_of_manufacture"),
+                    document.get("benefits"),
+                    document.get("link"),
+                    document.get("image")
             );
+            products.add(product);
         }
         return products;
     }
