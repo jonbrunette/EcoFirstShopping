@@ -69,6 +69,7 @@ function clearLocalStorage() {
 }
 
 function openCreditPage() {
+    console.log("Opening Page");
     var id = "blah";
     var newURL = `chrome-extension://${chrome.runtime.id}/buyoffset.html?productId=${id}`;
     window.open(newURL);
@@ -98,10 +99,14 @@ function gotoItem() {
     window.open(productUrl);
 }
 
+
+
 function onWindowLoad() {
 
     var message = document.querySelector('#message');
-    //document.getElementById('btnShowCreditOptions').addEventListener('click', openCreditPage);
+    document.getElementById('btnShowCreditOptions').addEventListener('click', openCreditPage);
+    message.innerHTML = "<b>TRhis text is for free</b>";
+
     //document.getElementById("actionDiv").style.display = "none";
     //document.getElementById("btnShowPageContent").style.display = "none";
 

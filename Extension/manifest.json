@@ -16,7 +16,7 @@
       "matches": [ "<all_urls>" ],
       "css": [ "styles.css" ],
       "js": [
-        "background.js"
+        "content.js"
       ]
     }
   ],
