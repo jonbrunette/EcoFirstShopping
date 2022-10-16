@@ -63,16 +63,8 @@ public class SQLiteDialect extends Dialect {
         return "select last_insert_rowid()";
     }
 
-    public boolean supportsLimit() {
-        return true;
-    }
-
     protected String getLimitString(String query, boolean hasOffset) {
         return query + (hasOffset ? " limit ? offset ?" : " limit ?");
-    }
-
-    public boolean supportsTemporaryTables() {
-        return true;
     }
 
     public String getCreateTemporaryTableString() {
