@@ -57,7 +57,8 @@ It's imperative that learning and creating can continue when educational institu
 
 ## Demo video
 
-[![Watch the video](https://raw.githubusercontent.com/Liquid-Prep/Liquid-Prep/main/images/readme/IBM-interview-video-image.png)](https://youtu.be/vOgCOoy_Bx0)
+https://user-images.githubusercontent.com/30491170/198356591-d17e44b3-43ec-46fe-9042-47d1c0b052ef.mp4
+
 
 ## The architecture
 
