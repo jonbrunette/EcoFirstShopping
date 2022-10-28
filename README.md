@@ -8,6 +8,8 @@ Rest APIs
    http://localhost:8081/products
 2. Search data
    http://localhost:8081/search?inField=name&keyword=Eco
+3. Swagger API 
+   http://localhost:8081/swagger-ui/index.html
 
 
 
