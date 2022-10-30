@@ -1,0 +1,47 @@
+[
+  {
+    "name": "HAY! Straws Natural Drinking Straws- 100 Pack (Cocktail 5)",
+    "category": "Drinks",
+    "manufacturer": "HAY! Straws",
+    "country_of_manufacture": "USA",
+    "benefits": "Natural, Organic, Vegan, Compostable, Renewable, Gluten Free, Biodegradable",
+    "link": "https://www.amazon.ca/HAY-Compostable-Biodegradable-Plastic-Free-Cocktail/dp/B07F9LHX3C/ref=sxts_rp_s_1_0?content-id=amzn1.sym.ce9d15b9-2b5d-4cc8-998e-c0d9d522df86%3Aamzn1.sym.ce9d15b9-2b5d-4cc8-998e-c0d9d522df86&crid=1VPRA104PM4TY&cv_ct_cx=straws&keywords=straws&pd_rd_i=B07F9LHX3C&pd_rd_r=63317938-9fdc-4f57-bb10-3599cae57e45&pd_rd_w=J1JDt&pd_rd_wg=IeE5i&pf_rd_p=ce9d15b9-2b5d-4cc8-998e-c0d9d522df86&pf_rd_r=B4PVT7QG2E40Z9FY8GRK&qid=1667077454&qu=eyJxc2MiOiI2LjAwIiwicXNhIjoiNS42NyIsInFzcCI6IjUuNDYifQ%3D%3D&sprefix=straws%2Caps%2C94&sr=1-1-f0029781-b79b-4b60-9cb0-eeda4dea34d6&th=1",
+    "image": "https://m.media-amazon.com/images/I/610ibvNde9L._AC_SL1464_.jpg",
+    "id": 0,
+    "price": "$31.28",
+    "rating": {
+      "stars": "a-star-4-5",
+      "number": 274
+    }
+  },
+  {
+    "name": "ALINK Glass Smoothie Straws, 10\" x 10 mm Long Reusable Clear Drinking Straws for Smoothie,Pack of 8 with 2 Cleaning Brush",
+    "category": "Drinks",
+    "manufacturer": "ALINK",
+    "country_of_manufacture": "Sweden",
+    "benefits": "Reusable, Durable",
+    "link": "https://www.amazon.ca/ALINK-Smoothie-Reusable-Drinking-Milkshakes/dp/B07CRCYHZ7/ref=sr_1_7?crid=1VPRA104PM4TY&keywords=straws&qid=1667078390&qu=eyJxc2MiOiI2LjAwIiwicXNhIjoiNS42NyIsInFzcCI6IjUuNDYifQ%3D%3D&sprefix=straws%2Caps%2C94&sr=8-7",
+    "image": "https://m.media-amazon.com/images/I/71SIZO4pTCL._AC_SL1500_.jpg",
+    "id": 2,
+    "price": "$14.99",
+    "rating": {
+      "stars": "a-star-4-5",
+      "number": 8437
+    }
+  },
+  {
+    "name": "Paper Drinking Straws | 100pcs",
+    "category": "Drinks",
+    "manufacturer": "BoonBoo",
+    "country_of_manufacture": "USA",
+    "benefits": "Natural, Organic, Vegan, Compostable, Biodegradable",
+    "link": "https://www.amazon.ca/dp/B0812DNBGP/ref=sspa_dk_detail_4?psc=1&pd_rd_i=B0812DNBGP&pd_rd_w=3TAJM&content-id=amzn1.sym.87330590-1be3-48f0-9805-924e0244033f&pf_rd_p=87330590-1be3-48f0-9805-924e0244033f&pf_rd_r=VZPPX82Z0NRFMNRYBPK2&pd_rd_wg=sZpo2&pd_rd_r=709ec93e-99ac-4e76-8385-75e85bcdb262&s=hpc&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFVQkEyQUtQTkNWWFMmZW5jcnlwdGVkSWQ9QTAzMTI4NjQySUw3V1BWSUVDQjY0JmVuY3J5cHRlZEFkSWQ9QTA5MTkwNTZZSloyU1hPT0FKMEImd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWMmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl",
+    "image": "https://m.media-amazon.com/images/I/81a5GNHVueL._AC_SL1500_.jpg",
+    "id": 1,
+    "price": "$16.99",
+    "rating": {
+      "stars": "a-star-4",
+      "number": 192
+    }
+  }
+]

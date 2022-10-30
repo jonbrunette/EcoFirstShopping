@@ -87,27 +87,19 @@ function removeItem() {
         row.style.display = "none";
 }
 
-function gotoItem() {
-    var productUrl = event.target.getAttribute("href");
-    //removeProductInLocalCache(id);
-    //var row = document.getElementById("tr" + id);
-
-    ////TODO: Remove completely not just hide
-    //if (typeof row !== 'undefined')
-    //    row.style.display = "none";
-
-    window.open(productUrl);
+function changeUserPrefs() {
+    //var checkedState = event.target.getAttribute("checked");
+    var checkedState = event.target.checked;
+    saveUserPrefLocalCache(checkedState, 5);
 }
-
-
 
 function onWindowLoad() {
 
     var message = document.querySelector('#message');
-    document.getElementById('btnShowCreditOptions').addEventListener('click', openCreditPage);
-    message.innerHTML = "<b>TRhis text is for free</b>";
+    //document.getElementById('btnShowCreditOptions').addEventListener('click', openCreditPage);
+    //message.innerHTML = "<b>TRhis text is for free</b>";
 
-    //document.getElementById("actionDiv").style.display = "none";
+    document.getElementById("actionDiv").style.display = "none";
     //document.getElementById("btnShowPageContent").style.display = "none";
 
     //chrome.tabs.executeScript(null, {
@@ -119,7 +111,26 @@ function onWindowLoad() {
     //    }
     //});
 
-    //loadSummaryFromCache();
+    var range = document.querySelector('.input-range');
+    var value = document.querySelector('.range-value');
+
+    if (range === null) {
+        console.warn("range is null");
+    }
+
+    if (value === null) {
+        console.warn("value is null");
+    }
+
+    var chkUseExtension = document.querySelector('#chkUseExtension');
+
+    chrome.storage.local.get(["userPref"], function (data) {
+
+        var userPrefs = JSON.parse(data["userPref"]);
+        chkUseExtension.checked = userPrefs["useExtension"];
+    });
+    
+    chkUseExtension.addEventListener('click', changeUserPrefs);
 }
 
 function addRemoveItemClickHandlers() {
@@ -146,49 +157,42 @@ function addItemLinkClickHandlers() {
     }
 }
 
-function loadSummaryFromCache() {
-    chrome.storage.local.get(null, function (data) {
+function saveUserPrefLocalCache(useExtension, numberResults) {
+    var userPref = { useExtension: useExtension, numberResults: numberResults };
+    var strUserPref = JSON.stringify(userPref);
+
+    try {
+        chrome.storage.local.set({ "userPref": strUserPref }, function () {
+            console.log('Value is set to ' + strUserPref);
+        });
+    }
+    catch (e) {
+        console.error("Error saving user prefs: " + e);
+    }
+}
+
+function getUserPrefFromLocalCache() {
+    chrome.storage.local.get(["userPref"], function (data) {
 
         if (Object.keys(data).length === 0) {
             return;
         }
 
-        var count = 0;
-        var str = "";
-        
-        for (var k in data) {
-            str += "<p>Found [" + k + "," + data[k] + "]</p>";
-            try {
-
-                if (!data[k].startsWith("{"))
-                    continue;
-
-                var product = JSON.parse(data[k]);
-
-                if (typeof product === 'undefined') {
-                    sendError(this, data[k], "Could not parse product");
-                    continue;
-                }
-
-                if(product.inCart == "y") {
-                    count++;
-
-                    var rowStr = formatItemRow(product);
-                    
-                    var tbl = document.getElementById("tblBasketClone");
-                    row = tbl.insertRow(tbl.rows.length);
-                    row.id = "tr" + product.id;
-                    row.innerHTML = rowStr;
-                }
-            }
-            catch (err) {
-                console.error("Error in loading products: " + err);
-            }
-        }
-
-        addRemoveItemClickHandlers();
-        addItemLinkClickHandlers();
+        var userPrefs = JSON.parse(data["userPref"]);
+        return userPrefs;
     });
 }
 
 window.onload = onWindowLoad;
+
+
+
+//var range = $('.input-range'),
+//    value = $('.range-value');
+//value.setAttribute("value", url);
+//value.innerText = range.value;
+
+//range.on('input', function () {
+//    value.html(this.value);
+//});
+

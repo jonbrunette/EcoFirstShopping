@@ -5,24 +5,114 @@
     <title>Eco First Shopping Extension</title>
     <script src="StoreScripts/CommonBasket.js"></script>
     <script src="popup.js"></script>
+    <script src="common.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="w3.css">
 </head>
 <body>
     <div class="mainDiv">
-        <div style="width: auto; top: 4px; left: 4px; float:left;">
-            <img src="images/eco-bag-128.png" width="32" alt="Eco First Shopping Logo" style="float:left;" />
-            <h4 style="float:right; margin-left:4px; margin-top: auto; vertical-align: text-top">Eco First Shopping </h4>
+        <div>
+            <table width="100%">
+                <tr>
+                    <td>
+                        <img src="images/eco-bag-128.png" width="32" alt="Eco First Shopping Logo" />
+                    </td>
+                    <td>
+                        <h4 class="introText">Eco friendly options for online shopping</h4>
+                    </td>
+                    <td align="right">
+                        <input id="chkUseExtension" type="checkbox" class="switch" checked>
+                        <label for="s2">Enable Extension</label>
+                    </td>
+                </tr>
+            </table>
         </div>
-        <div style="clear: left; float: left;">
-            <span>Eco friendly options for current shopping cart items:</span>
-        </div>
-        <div id="basketClone" style="width:100%; overflow-y: auto; height:65%; ">
+        <div id="basketClone">
             <table id="tblBasketClone"></table>
         </div>
-        <div id="message" style="width:100%; overflow-y: auto;"></div>
+        <div class="range-slider">
+            <p><h3>Show Max Results:</h3></p>
+            <input class="input-range" type="range" value="3" min="1" max="10">
+            <span class="range-value">3</span>
+        </div>
+        <div>
+            <p><h3>Eco Prioritization:</h3></p>
+            <table>
+                <tr>
+                    <td width="33%">
+                        <input id="c3" type="checkbox" checked>
+                        <label for="c3">Reusable</label>
+                    </td>
+                    <td width="33%">
+                        <input id="c4" type="checkbox">
+                        <label for="c4">Compostable</label>
+                    </td>
+                    <td width="33%">
+                        <input id="c4" type="checkbox">
+                        <label for="c4">Biodegradable</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="c5" type="checkbox">
+                        <label for="c5">Organic</label>
+                    </td>
+                    <td>
+                        <input id="c6" type="checkbox" checked>
+                        <label for="c6">Natural</label>
+                    </td>
+                    <td>
+                        <input id="c7" type="checkbox">
+                        <label for="c7">Non GMO</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="c8" type="checkbox">
+                        <label for="c8">Sustable Manufacturing</label>
+                    </td>
+                    <td>
+                        <input id="c9" type="checkbox" checked>
+                        <label for="c9">Sustable Materials</label>
+                    </td>
+                    <td>
+                        <input id="c10" type="checkbox">
+                        <label for="c10">Carbon Neutral</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="c11" type="checkbox">
+                        <label for="c11">1% for the planet</label>
+                    </td>
+                    <td>
+                        <input id="c12" type="checkbox" checked>
+                        <label for="c12">Carbon Offset</label>
+                    </td>
+                    <td>
+                        <input id="c13" type="checkbox">
+                        <label for="c13">Fair Trade</label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p><h3>Store Prioritization:</h3></p>
+            <table>
+                <tr>
+                    <td width="33%">
+                        <input id="c1" type="checkbox">
+                        <label for="c1">Price</label>
+                    </td>
+                    <td width="33%">
+                        <input id="c2" type="checkbox">
+                        <label for="c2">Free Shipping</label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="message"></div>
         <div id="actionDiv" class="w3-display-bottomright w3-padding-large">
-            <button id="btnShowPageContent" type="button" value="Show Content" style="display:none">Show Content</button>
+            <button id="btnShowPageContent" type="button" value="Show Content">Show Content</button>
             <button id="btnShowCreditOptions" type="button" value="Show Carbon Credit Options">Show Carbon Credit Options</button>
         </div>
     </div>

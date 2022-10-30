@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Smart Reusable Notebook Misdic Book Eco-Friendly Journal Erasable Hardbound Blank Flip Notebook Paper Sketching or Doodling(8.5x11)",
+    "category": "Stationary",
+    "manufacturer": "CLERWULD",
+    "country_of_manufacture": "USA",
+    "benefits": "Renewable, Reusable, WATERPROOF, Sustainable",
+    "link": "https://www.amazon.ca/Reusable-Notebook-Eco-Friendly-Hardbound-Sketching/dp/B099Z5RFFM/ref=sr_1_4_sspa?crid=ZJV8CQUILT8A&keywords=eco%2Bnotebook&qid=1667165427&qu=eyJxc2MiOiIzLjQyIiwicXNhIjoiMi4xMyIsInFzcCI6IjAuMDAifQ%3D%3D&sprefix=eco%2Bnotebook%2Caps%2C78&sr=8-4-spons&smid=A1F37ZB658NLSF&th=1",
+    "image": "https://m.media-amazon.com/images/I/71Z2p97gcFL._AC_SL1500_.jpg",
+    "id": 0,
+    "price": "$14.99",
+    "rating": {
+      "stars": "a-star-4",
+      "number": 103
+    }
+  },
+  {
+    "name": "Rocketbook Smart Reusable Notebook - Dot-Grid Eco-Friendly Notebook with 1 Pilot Frixion Pen & 1 Microfiber Cloth Included - Scarlet Sky Cover, Mini Size (3.5\",\"x\" 5.5\")",
+    "category": "Stationary",
+    "manufacturer": "Rocketbook",
+    "country_of_manufacture": "USA",
+    "benefits": "Renewable, Reusable, Durable, Sustainable",
+    "link": "https://www.amazon.ca/Rocketbook-Smart-Reusable-Notebook-Eco-Friendly/dp/B07ZHZ9LK7/ref=sr_1_6?keywords=rocketbook&qid=1667165742&qu=eyJxc2MiOiI1LjAxIiwicXNhIjoiNC45OSIsInFzcCI6IjQuNjEifQ%3D%3D&sprefix=rocket%2Caps%2C87&sr=8-6&th=1",
+    "image": "https://m.media-amazon.com/images/I/51Dl6pPtz0L._AC_SL1500_.jpg",
+    "id": 2,
+    "price": "$19.64",
+    "rating": {
+      "stars": "a-star-4-5",
+      "number": "13,618"
+    }
+  }
+]

@@ -1,2 +1,14 @@
 Icon
 https://www.flaticon.com/free-icon/eco-bag_8012787?term=shopping%20sustainable&page=1&position=1&page=1&position=1&related_id=8012787&origin=search#
+
+Form element css
+https://www.sliderrevolution.com/resources/styling-radio-buttons/
+
+SCSS Converter
+https://bfotool.com/scss-to-css#:~:text=How%20to%20Convert%20SCSS%20to%20CSS%3F%201%20Step,%28optional%29%20Output%20Options.%203%20Step%203%3A%20Generate%20output.
+
+Adobe Color Wheel
+https://color.adobe.com/create/color-wheel
+
+Slider:
+https://webdevtrick.com/css-range-slider/

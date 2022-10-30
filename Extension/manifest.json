@@ -5,6 +5,13 @@
   "description": "This extension monitors online shopping and offers alternatives which are better for the planet",
   "short_name": "ECO1stShopping",
   "permissions": [ "activeTab", "declarativeContent", "storage" ],
+  "host_permissions": [ "http://localhost:8081/*" ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "data/notebookSearch.json", "data/strawSearch.json", "/images/eco-bag-64.png" ],
+      "matches": [ "http://localhost:8081/*", "https://www.amazon.ca/*" ]
+    }
+  ],
   "icons": {
     "16": "images/eco-bag-64.png",
     "32": "images/eco-bag-64.png",
@@ -16,7 +23,8 @@
       "matches": [ "<all_urls>" ],
       "css": [ "styles.css" ],
       "js": [
-        "content.js"
+        "content.js",
+        "common.js"
       ]
     }
   ],
@@ -30,6 +38,10 @@
       "16": "images/eco-bag-64.png",
       "32": "images/eco-bag-64.png",
       "128": "images/eco-bag-128.png"
-    }
+    },
+    "js": [ "common.js" ]
+  },
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; connect-src https://* data: blob: filesystem:;"
   }
 }
