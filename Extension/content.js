@@ -40,7 +40,7 @@ async function lookForProductType() {
             searchText = "straws";
         }
 
-        if (productTitle.indexOf("notebook") || productTitle.indexOf("rocketbook") > 0) {
+        if (productTitle.indexOf("notebook") > 0 || productTitle.indexOf("rocketbook") > 0) {
             searchText = "notebook";
         }
     }
