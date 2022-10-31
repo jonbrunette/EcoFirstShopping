@@ -1,57 +1,55 @@
 # -*- coding: utf-8 -*-
 
+import json
 import pandas as pd
 import re
+import requests
 import pickle
 from joblib import dump, load
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.feature_extraction.text import CountVectorizer
 from wordcloud import STOPWORDS
 
-joblib_file = "logReg_model.pkl"
-logReg_model = load(joblib_file)
 
-KEY = "16DA74BA7426487F81379E2DD698412A"
-import requests
-import json
+class SearchEcoProducts:
+    def __init__(self):
+        self.KEY = "16DA74BA7426487F81379E2DD698412A"
+        self.joblib_file = "logReg_model.pkl"
+        self.logReg_model = load(self.joblib_file)
+        with open('tfid.pkl', 'rb') as f:
+            self.vect, self.tfidf_tf = pickle.load(f)
 
-keyword = 'strew'
+    def preProcessing(self, sentence):
+        sent = str(sentence)
+        sent = sent.lower()
+        sent = re.compile('[^a-z]+').sub(' ', sent).strip()
+        return sent
 
-params = {
-  'api_key': KEY,
-  'type': 'search',
-  'amazon_domain': 'amazon.com',
-  'search_term': keyword
-}
+    def searchByKeywords(self, keyword: str):
+        params = {
+            'api_key': self.KEY,
+            'type': 'search',
+            'amazon_domain': 'amazon.com',
+            'search_term': keyword
+        }
+        api_result = requests.get('https://api.rainforestapi.com/request', params)
+        items = pd.DataFrame(api_result.json()['search_results'])
+        items = items.fillna({'is_prime': False})
 
-api_result = requests.get('https://api.rainforestapi.com/request', params)
-dic = api_result.json()
+        return items[['title', 'asin', 'link', 'image', 'price', 'is_prime', 'rating', 'ratings_total']]
 
+    def getProductsList(self, keyword: str):
+        products = self.searchByKeywords(keyword)
+        products["clean_des"] = products["title"].apply(self.preProcessing)
 
-df = pd.DataFrame(dic['search_results'])
-df = df[['title', 'asin', 'link', 'image', 'price', 'is_prime', 'rating', 'ratings_total']]
+        counts = self.vect.transform(products["clean_des"])
+        pred_tfidf = self.tfidf_tf.transform(counts)
+        prob = self.logReg_model.predict_proba(pred_tfidf)
+        products["prob"] = prob[:,1]
+        products_sorted = products.sort_values(by="prob", ascending=False)
 
-with open('tfid.pkl', 'rb') as f:
-    vect, tfidf_tf = pickle.load(f)
+        ecoProducts = products_sorted[products_sorted["prob"] > 0.5]
+        ecoProducts = ecoProducts[:10]
+        ecoProducts = ecoProducts.drop(columns = ["clean_des", "prob"])
 
-def preProcessing(sentence):
-    sent = str(sentence)
-    sent = sent.lower()
-    sent = re.compile('[^a-z]+').sub(' ', sent).strip()
-    return sent
-
-df["clean"] = df["title"].apply(preProcessing)
-df["clean"]
-
-counts = vect.transform(df["clean"])
-pred_tfidf = tfidf_tf.transform(counts)
-prob = logReg_model.predict_proba(pred_tfidf)
-
-df["prob"] = prob[:,1]
-
-df_sorted = df.sort_values(by="prob", ascending=False)
-
-df_sorted = df_sorted[df_sorted["prob"] > 0.5]
-df_sorted = df_sorted[:10]
-
-res_json = json.dumps(df_sorted.drop(columns = ["clean", "prob"]).to_dict('records'))
+        return ecoProducts
