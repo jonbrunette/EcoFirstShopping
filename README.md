@@ -61,7 +61,7 @@ We aim to show that enduring the planet  doesn’t mean letting go of one's want
 
 ## Demo video
 
-https://user-images.githubusercontent.com/30491170/198356591-d17e44b3-43ec-46fe-9042-47d1c0b052ef.mp4
+https://youtu.be/dmpVdeNjFYg
 
 
 ## The architecture
