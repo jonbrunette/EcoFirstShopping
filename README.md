@@ -61,8 +61,7 @@ We aim to show that enduring the planet  doesn’t mean letting go of one's want
 
 ## Demo video
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/dmpVdeNjFYg" title="Eco First Shopping" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+[![Watch the Eco First Shopping video](https://img.youtube.com/vi/dmpVdeNjFYg/default.jpg)](https://youtu.be/dmpVdeNjFYg)
 
 ## The architecture
 
