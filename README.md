@@ -38,6 +38,8 @@ Rest APIs
 
 Online shopping prioritizes profits over environmentally sustainable options. In most cases the cheapest or least eco-friendly option is shown first to consumer and shoppers. The online shopping experience is clouded in overwhelming product suggestions and "buy it now" attitude. Making smart environmentally motivated choices is difficult. 
 
+We are here to help consumer make better choices.
+
 
 ### How can technology help?
 We want to positively influence more people into making eco-friendly and zero-waste lifestyle decisions through products that are reusable, biodegradable, sustainable, all-natural, non-toxic and made from recycled materials.
@@ -137,7 +139,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Team
 
-We are group of enthusiasts who want to help support and encourage environmental awareness using our technical competancies . Our passion is Earth friendliness, green living, and the conservation of critical resources like water and energy. We are geographically dispersed, met each other (via zoom) during project initiation and have ever since been dedicated to this project. All of our interactions were via zoom calls and over the course of the past three months we have shared and learnt alot from each other and are looking forward to buildiong onto this solution and enhancing it in future.
+We are group of enthusiasts who want to help support and encourage environmental awareness using our technical competancies . Our passion is Earth friendliness, green living, and the conservation of critical resources like water and energy. We are geographically dispersed, met each other (via zoom) during project initiation and have ever since been dedicated to this project. All of our interactions were via zoom calls and over the course of the past three months we have shared and learnt alot from each other and are looking forward to building onto this solution and enhancing it in future.
 
 Jonathan Brunette 
 
