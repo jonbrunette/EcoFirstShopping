@@ -66,16 +66,24 @@ Steps to follow to install the extension:
 3. Review Options- _Review the options and note why they have been boosted in search results and make an informed purchase__.(Our chrome extension then invokes the API which performs a lookup based on the pre-existing products and based on the ML used to add newer products matching eco-friendly filter, results are returned back.)_
 
 ## Visuals demonstraing the chrome extension
-The user (who has installed our browser extenstion) is looking to buy straws on amazon
+**The user (who has installed our browser extenstion) is looking to buy straws on amazon**
+
+
 ![unnamed](https://user-images.githubusercontent.com/95766933/201418049-b2f221fe-7b8b-4a06-b0e6-11e43a159e14.png)
 
-The chrome extension ranks the suggested products based on their eco-friendy features
+**The chrome extension ranks the suggested products based on their eco-friendy features**
+
+
 ![unnamed](https://user-images.githubusercontent.com/95766933/201418172-058448ff-92a3-4ca4-8812-c70057e170e3.png)
 
-The reason for suggetsing these products is displayed to the user
+**The reason for suggetsing these products is displayed to the user**
+
+
 ![unnamed](https://user-images.githubusercontent.com/95766933/201418223-be93f14a-4838-449f-b03e-10153f26ae86.png)
 
-A user without this extension will have the below view
+**A user **without** this extension will have the below view**
+
+
 ![unnamed](https://user-images.githubusercontent.com/95766933/201418389-a9d7809a-3143-4b8e-8834-fd54df2d3ecd.png)
 
 ## Project roadmap
