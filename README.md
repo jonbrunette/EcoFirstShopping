@@ -35,30 +35,20 @@ Rest APIs
    - [Acknowledgments](#acknowledgments)
 
 ## Short description
-Tech waste is a big form of waste that we don’t really talk about or see . 
 
-An undetermined amount of used electronics is shipped from the United States and other developed countries to developing countries that lack the capacity to reject imports or to handle these materials appropriately. Without proper standards and enforcement, improper practices may result in public health and environmental concerns, even in countries where processing facilities exist.We have serious concerns about unsafe handling of used electronics and e-waste, in developing countries, that results in harm to human health and the environment. Some of the hazards of electronics waste, include harmful chemicals such as lead, cadmium, and other known carcinogens, which can leach into the soil and contaminate water supplies.
+Online shopping prioritizes profits over environmentally sustainable options. In most cases the cheapest or least eco-friendly option is shown first to consumer and shoppers. The online shopping experience is clouded in overwhelming product suggestions and "buy it now" attitude. Making smart environmentally motivated choices is difficult. 
 
-As a result various channels are opening up to reduce carbon footprint, one of which is by manufacturing eco-friendly products that are bio-degradable. 
-
-Our aim is to promote these products, bringing these in fornt of the buyer and showcasing how they can make a difference by making better choices.
-
-### What's the problem?
-- Did you know the impact your lifestyle is having on the environment?
-- Did you know about the term "Technology Waste " and how we have been contributing to this effect ?
-- Did you know more than 50 million metric tons of E-waste is generated globally every year ?
-- Do you know what happens to the phone, earphones, tech accessories you just broke and threw out ?
-
-The lack of awareness of what happens to these devices is a really big problem. 
-
-**Once we all become aware it’s a problem, solutions can start flowing in.**
 
 ### How can technology help?
-Our goal is to help the buyer find the product of their choice with the best recommendation for better products which reduce environmental impacts. For every product category our algorithm looks for the company that uses the most eco friendly products and procedures to build it, which we then propose to the buyers via chrome extension.
+We want to positively influence more people into making eco-friendly and zero-waste lifestyle decisions through products that are reusable, biodegradable, sustainable, all-natural, non-toxic and made from recycled materials.
+
+Our goal is to help the buyer find the product of their choice with the best recommendation for better products which reduce environmental impacts. For every product category our algorithm looks for the company that uses the most eco friendly products and processes to manufacture it, which we then propose to the buyers via our browser extension.
 
 ### The idea
 
 We aim to show that enduring the planet  doesn’t mean letting go of one's wants and needs. We want to promote a greener and healthier environment by use of eco-friendly tech products that can positively affect our planet ensuringwe fulfill the requirements without hurting Mother earth in the process.
+
+Through advanced filtering with the help of Machine learning we aim to show that enduring the planet doesn’t mean letting go of one's wants and needs. We want to promote a greener and healthier environment by use of eco-friendly tech products that can positively affect our planet ensuring we fulfill the requirements without hurting Mother earth in the process. This lets the consumer vote with their dollars and select products they support rather than an algorithm used to generate the most profit
 
 ## Demo video
 
@@ -69,13 +59,24 @@ We aim to show that enduring the planet  doesn’t mean letting go of one's want
 
 
 ![image](https://user-images.githubusercontent.com/95766933/198687575-b8a328fe-a780-47ac-98fc-4af4da8e0e1d.png)
+Steps to follow to install the extension:
 
-1. The buyer logs in to online shopping site and searches for product.
-2. Our chrome extension then invokes the API .
-3. API performs a lookup. 
-4. Based on the pre-existing products and based on the ML used to add newer products matching eco-friendly filter, results are returned back.
+1. Install Browser Extension - _Using the associated browser extension store locate and install the Eco First Shopping extension_
+2. Shop online as usual - _The buyer logs in to online shopping site and searches for product.The extension will re-rank search results and associated product recommendations to prioritize eco-friendly options_
+3. Review Options- _Review the options and note why they have been boosted in search results and make an informed purchase__.(Our chrome extension then invokes the API which performs a lookup based on the pre-existing products and based on the ML used to add newer products matching eco-friendly filter, results are returned back.)_
 
+## Visuals demonstraing the chrome extension
+The user (who has installed our browser extenstion) is looking to buy straws on amazon
+![unnamed](https://user-images.githubusercontent.com/95766933/201418049-b2f221fe-7b8b-4a06-b0e6-11e43a159e14.png)
 
+The chrome extension ranks the suggested products based on their eco-friendy features
+![unnamed](https://user-images.githubusercontent.com/95766933/201418172-058448ff-92a3-4ca4-8812-c70057e170e3.png)
+
+The reason for suggetsing these products is displayed to the user
+![unnamed](https://user-images.githubusercontent.com/95766933/201418223-be93f14a-4838-449f-b03e-10153f26ae86.png)
+
+A user without this extension will have the below view
+![unnamed](https://user-images.githubusercontent.com/95766933/201418389-a9d7809a-3143-4b8e-8834-fd54df2d3ecd.png)
 
 ## Project roadmap
 
@@ -126,7 +127,9 @@ See the "long description" field in our submission (not in this repo) for the lo
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
-## Authors
+## Team
+
+We are group of enthusiasts who want to help support and encourage environmental awareness using our technical competancies . Our passion is Earth friendliness, green living, and the conservation of critical resources like water and energy. We are geographically dispersed, met each other (via zoom) during project initiation and have ever since been dedicated to this project. All of our interactions were via zoom calls and over the course of the past three months we have shared and learnt alot from each other and are looking forward to buildiong onto this solution and enhancing it in future.
 
 Jonathan Brunette 
 
