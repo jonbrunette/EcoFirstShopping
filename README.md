@@ -33,6 +33,7 @@ Rest APIs
    - [Authors](#authors)
    - [License](#license)
    - [Acknowledgments](#acknowledgments)
+
 ## Short description
 Tech waste is a big form of waste that we don’t really talk about or see . 
 
@@ -86,6 +87,22 @@ The project currently does the following things.
 
 ![image](https://user-images.githubusercontent.com/95766933/198691871-9dae9a20-9603-42b9-873c-471ee1135666.png)
 
+## Getting Started
+
+Pre-requites : 
+   1. Oracle Java 15 version
+   2. MVN 3.6 version
+
+3  commands to be exeucted from CLI from the workspace src folder of the project : 
+
+mvn compile
+mvn package
+mvn spring-boot:run
+
+The localhost urls :
+
+1. http://localhost:8081/search?inField=name&keyword=Eco
+2. http://localhost:8081/products
 
 
 ## Live demo
